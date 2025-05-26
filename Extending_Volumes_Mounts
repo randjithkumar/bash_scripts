@@ -14,5 +14,8 @@
   df -h
   lsblk
   sudo lvs
-  sudo resize2fs /dev/ubuntu-vg/ubuntu-lv
+  For ext4 (most common):
+    sudo resize2fs /dev/<vg-name>/<lv-name>
+  For XFS:
+    sudo xfs_growfs /
   df -h
