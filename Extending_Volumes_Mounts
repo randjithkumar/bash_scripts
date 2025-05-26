@@ -1,0 +1,18 @@
+  sudo su -
+  sudo fdisk -l
+  sudo fdisk /dev/sdb
+  lsblk
+  sudo vgs
+  sudo pvcreate /dev/sdb
+  lsblk
+  sudo vgs
+  sudo vgextend ubuntu-vg /dev/sdb
+  df -h
+  sudo lvs
+  sudo lvextend -l +100%FREE /dev/ubuntu--vg/ubuntu--lv
+  sudo lvextend -l +100%FREE /dev/ubuntu-vg/ubuntu-lv
+  df -h
+  lsblk
+  sudo lvs
+  sudo resize2fs /dev/ubuntu-vg/ubuntu-lv
+  df -h
